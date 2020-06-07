@@ -8,13 +8,13 @@
  */
 class Solution 
 {
-//ç›´æŽ¥æ¨¡æ‹Ÿç›¸åŠ å³å¯
+//Ö±½ÓÄ£ÄâÏà¼Ó¼´¿É
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) 
     {
-        int carry=0; //è¡¨ç¤ºè¿›ä½
-        ListNode* res=new ListNode; //å¤´ç»“ç‚¹
-        ListNode* cur=res; //curå½“å‰ä½ç½®
+        int carry=0; //±íÊ¾½øÎ»
+        ListNode* res=new ListNode; //Í·½áµã
+        ListNode* cur=res; //curµ±Ç°Î»ÖÃ
         while(l1||l2)
         {
             if(l1) carry+=l1->val,l1=l1->next;
@@ -24,7 +24,7 @@ public:
             else carry=0;
             cur=cur->next;
         }
-        if(carry) cur->next=new ListNode(1);  //æœ€é«˜ä½è¿›ä½ä¸º1
+        if(carry) cur->next=new ListNode(1);  //×î¸ßÎ»½øÎ»Îª1
         return res->next;
     }
 };

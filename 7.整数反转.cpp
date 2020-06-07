@@ -1,5 +1,5 @@
-å› ä¸ºintåž‹æ•´æ•°é€†åºåŽå¯èƒ½ä¼šæº¢å‡ºï¼Œæ‰€ä»¥æˆ‘ä»¬è¦ç”¨long longè®°å½•ä¸­é—´ç»“æžœï¼›
-åœ¨C++ä¸­ï¼Œè´Ÿæ•°çš„å–æ¨¡è¿ç®—å’Œæ•°å­¦æ„ä¹‰ä¸Šçš„å–æ¨¡è¿ç®—ä¸åŒï¼Œç»“æžœè¿˜æ˜¯è´Ÿæ•°ï¼Œæ¯”å¦‚ ?12%10=?2ï¼Œæ‰€ä»¥æˆ‘ä»¬ä¸éœ€è¦å¯¹è´Ÿæ•°è¿›è¡Œé¢å¤–å¤„ç†ã€‚
+ÒòÎªintÐÍÕûÊýÄæÐòºó¿ÉÄÜ»áÒç³ö£¬ËùÒÔÎÒÃÇÒªÓÃlong long¼ÇÂ¼ÖÐ¼ä½á¹û£»
+ÔÚC++ÖÐ£¬¸ºÊýµÄÈ¡Ä£ÔËËãºÍÊýÑ§ÒâÒåÉÏµÄÈ¡Ä£ÔËËã²»Í¬£¬½á¹û»¹ÊÇ¸ºÊý£¬±ÈÈç ?12%10=?2£¬ËùÒÔÎÒÃÇ²»ÐèÒª¶Ô¸ºÊý½øÐÐ¶îÍâ´¦Àí¡£
 class Solution 
 {
 public:
@@ -13,11 +13,11 @@ public:
         if (res < INT_MIN || res > INT_MAX) return 0;
         return res;
     }
-    //å¦‚æžœä¸èƒ½ç”¨long longçš„è¯
+    //Èç¹û²»ÄÜÓÃlong longµÄ»°
     int reverse(int x) {
         int res = 0;
         while (x) {
-            if (x > 0 && res > (INT_MAX - x % 10) / 10) return 0;  //åˆ¤æ–­æ˜¯å¦æº¢å‡º
+            if (x > 0 && res > (INT_MAX - x % 10) / 10) return 0;  //ÅÐ¶ÏÊÇ·ñÒç³ö
             if (x < 0 && res < (INT_MIN - x % 10) / 10) return 0;
             res = res * 10 + x % 10;
             x /= 10;
